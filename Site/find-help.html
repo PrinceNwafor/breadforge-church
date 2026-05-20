@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find help at The Breadforge Church — prayer, counselling, financial support, spiritual guidance, and community care. Ikorodu, Lagos." />
+  <title>Find Help — The Breadforge Church | Eklektos Apostolic Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../Logo/images.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .help-card {
+      display: flex;
+      flex-direction: column;
+      padding: 36px;
+      background: white;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-border-light);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .help-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
+    }
+    .help-card__icon {
+      width: 64px;
+      height: 64px;
+      background: var(--color-accent-subtle);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .help-card__title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 10px;
+    }
+    .help-card__desc {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.75;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .help-card__cta {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .help-card--urgent {
+      border-color: var(--color-accent);
+      background: linear-gradient(135deg, var(--color-warm), white);
+    }
+    .help-card--urgent .help-card__icon {
+      background: var(--color-accent);
+      color: white;
+    }
+    .crisis-bar {
+      background: var(--color-primary);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .crisis-bar a {
+      color: var(--color-accent-light);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="main-nav" style="background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(61,32,10,0.08);">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="../Logo/images.jpg" alt="Eklektos" /><div><div class="nav__logo-text">The Breadforge</div><div class="nav__logo-sub" style="color:var(--color-muted);">Eklektos Apostolic Network</div></div></a>
+      <ul class="nav__links">
+        <li><a href="about.html" class="nav__link">About</a></li>
+        <li><a href="sermons.html" class="nav__link nav__link--sermons">Sermons</a></li>
+        <li><a href="ministries.html" class="nav__link">Ministries</a></li>
+        <li><a href="events.html" class="nav__link">Events</a></li>
+        <li><a href="find-help.html" class="nav__link nav__link--active">Find Help</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="give.html" class="btn btn--secondary btn--sm">Give</a>
+        <a href="plan-visit.html" class="btn btn--primary btn--sm">Plan a Visit</a>
+        <button class="nav__menu-btn" id="menu-btn"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav__close" id="mobile-nav-close">✕</button>
+    <ul class="mobile-nav__links">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav__link">About</a></li>
+      <li><a href="sermons.html" class="mobile-nav__link">Sermons</a></li>
+      <li><a href="find-help.html" class="mobile-nav__link">Find Help</a></li>
+      <li><a href="plan-visit.html" class="mobile-nav__link">Plan a Visit</a></li>
+      <li><a href="give.html" class="mobile-nav__link">Give</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Crisis Bar -->
+  <div class="crisis-bar">
+    <p style="font-size:14px;margin:0;">In immediate crisis? <a href="contact.html#prayer">Reach out now →</a> or message us on <a href="https://www.facebook.com/EklektosApostolicNetwork" target="_blank">Facebook</a>. You are not alone.</p>
+  </div>
+
+  <main>
+
+    <div class="page-hero">
+      <span class="page-hero__label">Care &amp; Support</span>
+      <h1 class="page-hero__title">Whatever You're Facing,<br>You Don't Face It Alone.</h1>
+      <p class="page-hero__subtitle">The Breadforge Church is a community of people committed to one another. Whether you need prayer, a listening ear, practical help, or someone to walk with you through a hard season — we're here.</p>
+    </div>
+
+    <!-- Help Categories -->
+    <section class="section">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:56px;" class="reveal">
+          <span class="section-header__label">How Can We Help?</span>
+          <h2>Choose What Fits Your Need</h2>
+          <p style="color:var(--color-muted);max-width:560px;margin:12px auto 0;font-size:16px;line-height:1.8;">Every situation is different. Click on what resonates most and we'll walk you through how we can support you.</p>
+        </div>
+
+        <div class="grid grid-3 reveal" style="gap:24px;margin-bottom:48px;">
+
+          <!-- Prayer -->
+          <a href="contact.html#prayer" class="help-card help-card--urgent">
+            <div class="help-card__icon">🙏</div>
+            <div class="help-card__title">I Need Prayer</div>
+            <p class="help-card__desc">Submit a prayer request and our pastoral team and prayer warriors will intercede on your behalf. We take every request seriously and bring it before God.</p>
+            <div class="help-card__cta">Submit a request →</div>
+          </a>
+
+          <!-- Grief / Loss -->
+          <a href="contact.html" class="help-card">
+            <div class="help-card__icon">💔</div>
+            <div class="help-card__title">I'm Grieving or in Loss</div>
+            <p class="help-card__desc">Bereavement, broken relationships, disappointment, or loss of any kind — grief is real and God meets us in it. Our pastoral care team is available to walk with you.</p>
+            <div class="help-card__cta">Talk to someone →</div>
+          </a>
+
+          <!-- Anxiety / Mental Health -->
+          <a href="contact.html" class="help-card">
+            <div class="help-card__icon">🌊</div>
+            <div class="help-card__title">I'm Anxious or Overwhelmed</div>
+            <p class="help-card__desc">Anxiety, depression, burnout, and mental strain are real battles. You don't have to perform strength. We offer pastoral counsel and connection to appropriate care.</p>
+            <div class="help-card__cta">Reach out →</div>
+          </a>
+
+          <!-- Marriage / Family -->
+          <a href="contact.html" class="help-card">
+            <div class="help-card__icon">👨‍👩‍👧</div>
+            <div class="help-card__title">Marriage or Family Struggles</div>
+            <p class="help-card__desc">Conflict at home, broken communication, parenting challenges, or marital hardship — our Covenant Family ministry and pastoral team offer confidential support and guidance.</p>
+            <div class="help-card__cta">Get support →</div>
+          </a>
+
+          <!-- Spiritual Dryness -->
+          <a href="contact.html" class="help-card">
+            <div class="help-card__icon">🔥</div>
+            <div class="help-card__title">I Feel Far from God</div>
+            <p class="help-card__desc">Spiritual dryness, doubt, or a faith that feels cold — many have been exactly where you are. Let us connect you with someone who can pray with you and help reignite your walk.</p>
+            <div class="help-card__cta">Reconnect →</div>
+          </a>
+
+          <!-- Financial / Practical -->
+          <a href="contact.html" class="help-card">
+            <div class="help-card__icon">🛡️</div>
+            <div class="help-card__title">I Need Practical Help</div>
+            <p class="help-card__desc">Financial hardship, food needs, job search support, or access to community resources — reach out to us and let us connect you with what's available within and through our community.</p>
+            <div class="help-card__cta">Let us know →</div>
+          </a>
+
+          <!-- Addiction / Bondage -->
+          <a href="contact.html" class="help-card">
+            <div class="help-card__icon">⛓️</div>
+            <div class="help-card__title">I'm Struggling with Addiction or Bondage</div>
+            <p class="help-card__desc">Sexual sin, substance dependence, pornography, or other areas of bondage — God sets the captive free. We believe in deliverance and we walk with people toward it with grace and truth.</p>
+            <div class="help-card__cta">Talk confidentially →</div>
+          </a>
+
+          <!-- New Believer -->
+          <a href="contact.html" class="help-card">
+            <div class="help-card__icon">🌱</div>
+            <div class="help-card__title">I Just Gave My Life to Jesus</div>
+            <p class="help-card__desc">Welcome to the family. What happens next matters enormously. We'd love to connect you with a discipleship pathway, a small group, and a community that will walk with you from day one.</p>
+            <div class="help-card__cta">Start your next step →</div>
+          </a>
+
+          <!-- Campus Student -->
+          <a href="ministries.html" class="help-card">
+            <div class="help-card__icon">🎓</div>
+            <div class="help-card__title">I'm a Campus Student</div>
+            <p class="help-card__desc">Campus life can be isolating. We have a community specifically for university and polytechnic students — the Campus Missionary Force. Academic pressure, spiritual battles, purpose — let's do it together.</p>
+            <div class="help-card__cta">Join us on campus →</div>
+          </a>
+
+        </div>
+
+        <!-- Not Sure -->
+        <div style="background:var(--color-warm);border-radius:var(--radius-2xl);padding:48px;text-align:center;border:1px solid var(--color-border-light);" class="reveal">
+          <div style="font-size:36px;margin-bottom:16px;">🤷‍♂️</div>
+          <h3 style="margin-bottom:12px;">Not Sure What You Need?</h3>
+          <p style="color:var(--color-muted);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.8;">That's okay. Sometimes we just know something is wrong but don't have the words for it yet. Reach out to us directly — you don't need to have it figured out to ask for help.</p>
+          <a href="contact.html" class="btn btn--primary btn--lg">Just Talk to Someone</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promise -->
+    <div class="scripture-banner">
+      <p class="scripture-banner__text">"Cast all your anxiety on him because he cares for you."</p>
+      <p class="scripture-banner__ref">1 Peter 5:7</p>
+    </div>
+
+    <!-- Our Commitment -->
+    <section class="section section--warm">
+      <div class="container">
+        <div class="two-col reveal">
+          <div>
+            <span class="section-header__label">Our Commitment to You</span>
+            <h2 style="margin-bottom:20px;">How We Handle<br>What You Share</h2>
+            <div style="display:flex;flex-direction:column;gap:20px;">
+              <div style="display:flex;gap:16px;align-items:flex-start;">
+                <div style="width:40px;height:40px;background:var(--color-accent);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0;">🔒</div>
+                <div>
+                  <div style="font-weight:700;color:var(--color-primary);margin-bottom:4px;">Confidentiality</div>
+                  <p style="font-size:14px;color:var(--color-muted);line-height:1.7;">What you share with our pastoral team stays within the pastoral team. We do not share personal details without your permission.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start;">
+                <div style="width:40px;height:40px;background:var(--color-accent);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0;">🚫</div>
+                <div>
+                  <div style="font-weight:700;color:var(--color-primary);margin-bottom:4px;">No Judgment</div>
+                  <p style="font-size:14px;color:var(--color-muted);line-height:1.7;">Whatever you're dealing with, you will not be shamed, lectured, or rejected. We are a grace community. You are welcome as you are.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start;">
+                <div style="width:40px;height:40px;background:var(--color-accent);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0;">🤝</div>
+                <div>
+                  <div style="font-weight:700;color:var(--color-primary);margin-bottom:4px;">We'll Walk With You</div>
+                  <p style="font-size:14px;color:var(--color-muted);line-height:1.7;">We don't just pray once and move on. Our team is committed to ongoing connection and walking with you through whatever season you're in.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:16px;align-items:flex-start;">
+                <div style="width:40px;height:40px;background:var(--color-accent);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0;">📡</div>
+                <div>
+                  <div style="font-weight:700;color:var(--color-primary);margin-bottom:4px;">We Refer When Needed</div>
+                  <p style="font-size:14px;color:var(--color-muted);line-height:1.7;">We know our limits. If you need professional mental health care or specialist support, we will connect you to the right people. You deserve the right kind of help.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--color-primary);border-radius:var(--radius-2xl);padding:48px;">
+            <h3 style="color:white;margin-bottom:24px;">Reach Out Now</h3>
+            <p style="color:rgba(255,255,255,0.7);font-size:15px;line-height:1.8;margin-bottom:32px;">The fastest way to connect with someone on our team is through any of these channels:</p>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <a href="contact.html#prayer" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:var(--radius-lg);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                <div style="font-size:22px;">🙏</div>
+                <div>
+                  <div style="font-weight:600;color:white;font-size:14px;">Submit a Prayer Request</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,0.55);">Our team prays over every request</div>
+                </div>
+              </a>
+              <a href="contact.html" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:var(--radius-lg);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                <div style="font-size:22px;">✉️</div>
+                <div>
+                  <div style="font-weight:600;color:white;font-size:14px;">Send a Message</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,0.55);">We'll respond within 24 hours</div>
+                </div>
+              </a>
+              <a href="https://www.facebook.com/EklektosApostolicNetwork" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:var(--radius-lg);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                <div style="font-size:22px;">💬</div>
+                <div>
+                  <div style="font-weight:600;color:white;font-size:14px;">Message on Facebook</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,0.55);">@EklektosApostolicNetwork</div>
+                </div>
+              </a>
+              <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.08);border-radius:var(--radius-lg);text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+                <div style="font-size:22px;">📱</div>
+                <div>
+                  <div style="font-weight:600;color:white;font-size:14px;">WhatsApp Us</div>
+                  <div style="font-size:12px;color:rgba(255,255,255,0.55);">Quick response for urgent needs</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming On Sunday -->
+    <section class="section" style="text-align:center;">
+      <div class="container reveal">
+        <div style="max-width:600px;margin:0 auto;">
+          <span class="section-header__label">You're Welcome Here</span>
+          <h2 style="margin-bottom:16px;">Sometimes the First Step<br>Is Just Showing Up</h2>
+          <p style="color:var(--color-muted);font-size:17px;line-height:1.8;margin-bottom:32px;">You don't need to explain yourself or have your story together before you walk through our doors. Come on Sunday and let the Word and the community meet you where you are.</p>
+          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+            <a href="plan-visit.html" class="btn btn--primary btn--lg">Plan a Visit</a>
+            <a href="sermons.html" class="btn btn--secondary btn--lg">Listen to a Sermon First</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo"><img src="../Logo/images.jpg" alt="Eklektos" /><span class="footer__logo-name">The Breadforge Church</span></a>
+          <p class="footer__tagline">An apostolic community forging lives through the Word. Ikorodu, Lagos, Nigeria.</p>
+          <div class="footer__service-times">
+            <div class="footer__service-time"><span>Sunday Service</span><span>8:00am &amp; 10:30am</span></div>
+            <div class="footer__service-time"><span>Wednesday Prayer &amp; Bible Study</span><span>6:00pm</span></div>
+          </div>
+        </div>
+        <div><h4 class="footer__col-title">Explore</h4><ul class="footer__links"><li><a href="about.html" class="footer__link">About Us</a></li><li><a href="beliefs.html" class="footer__link">Our Beliefs</a></li><li><a href="ministries.html" class="footer__link">Ministries</a></li><li><a href="sermons.html" class="footer__link">Sermons</a></li></ul></div>
+        <div><h4 class="footer__col-title">Connect</h4><ul class="footer__links"><li><a href="plan-visit.html" class="footer__link">Plan a Visit</a></li><li><a href="give.html" class="footer__link">Give Online</a></li><li><a href="contact.html#prayer" class="footer__link">Prayer Request</a></li></ul></div>
+        <div><h4 class="footer__col-title">Find Us</h4><ul class="footer__links"><li><span class="footer__link" style="cursor:default;color:rgba(255,255,255,0.55);">Ikorodu, Lagos<br>Nigeria</span></li><li style="margin-top:8px;"><a href="https://www.facebook.com/EklektosApostolicNetwork" target="_blank" class="footer__link">Facebook Page</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 The Breadforge Church | Eklektos Apostolic Network.</p></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/234XXXXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <script src="js/main.js"></script>
+</body>
+</html>

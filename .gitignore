@@ -1,0 +1,11 @@
+# Large video files — host these separately (YouTube/Google Drive)
+Videos/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
